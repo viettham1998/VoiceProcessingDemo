@@ -1,0 +1,180 @@
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Voice Processing Demo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						
+					</header>
+
+				<!-- Menu -->
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1><font style="font-variant: small-caps">Trang web phục vụ demo Xử lý Tiếng nói - <font color = #58c3c2>Audio Demo</font></h1>
+							<h2>Dựa trên bài báo: <font color = #58c3c2> Any-to-Many Voice Conversion with Location-Relative Sequence-to-Sequence Modeling</font></h2>
+							<font size = 5><p><i> Kaizhi Qian<sup>*</sup>, Yang Zhang<sup>*</sup>, Shiyu Chang, Xuesong Yang, Mark Hasegawa-Johnson</i></p></font>
+							<p></p>
+							<!--<a href="#source" class="button fit">Source Code</a>-->
+							
+							<br></br><br></br>
+							<!-- Text -->
+							    <section>
+							    <a name="traditional"></a>
+							    	<h2><font size = 5 color= #58c3c2>Chuyển đổi giọng nói sang nhiều người khác nhau</font></h2>
+							    	<p>Demo bên dưới bao gồm việc chuyển đổi giọng nói từ tiếng Việt sang tiếng Anh, từ Nam sang Nữ và ngược lại</p>
+							    <!-- 	<ul class="12u 12u$(medium)">
+										<li><b><font style="font-variant: small-caps">AutoVC</font></b> - the proposed autoencoder-based conversion algorithm</li>
+										<li><b><font style="font-variant: small-caps">AutoVC-one-hot</font></b> - the proposed autoencoder-based conversion algorithm conditioned on one-hot speaker embeddings</li>
+										<li><b>StarGAN-VC</b> - a voice conversion system that adopts the StarGAN paradigm.</li>
+										<li><b>Chou et. al.</b> - a voice conversion system combining autoencoder with GAN and speaker classifier.</li>
+									</ul>-->
+									<p>Dưới đây là các file âm thanh demo.</p>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th><font color= #58c3c2>Giọng nói gốc</font></th>
+													<th><font color= #58c3c2>Giọng nói mục tiêu cần đạt được</font></th>
+													<th><font color= #58c3c2>Giọng nói đã chuyển đổi</font></th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td rowspan="8">Tiếng Việt (Nam) <audio controls=""><source src="audios/ppg-vc/source/hvtham_TV_target.wav" /><embed height="50" src="audios/ppg-vc/source/hvtham_TV_target.wav" width="100"></embed></audio></td>
+													<td rowspan="4">Tiếng Việt (Nam) <audio controls=""><source src="audios/ppg-vc/Target/ThayTriet_TV_source.wav" /><embed height="50" src="audios/ppg-vc/Target/ThayTriet_TV_source.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nam_TV/vc_hvtham_TV_target_ref_ThayTriet_TV_source_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nam_TV/vc_hvtham_TV_target_ref_ThayTriet_TV_source_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Việt (Nữ) <audio controls=""><source src="audios/ppg-vc/Target/nu_TV_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nu_TV_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nu_TV/vc_hvtham_TV_target_ref_nu_TV_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nu_TV/vc_hvtham_TV_target_ref_nu_TV_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Anh (Nam) <audio controls=""><source src="audios/ppg-vc/Target/nam_TA_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nam_TA_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nam_TA/vc_hvtham_TV_target_ref_nam_TA_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nam_TA/vc_hvtham_TV_target_ref_nam_TA_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Anh (Nữ) <audio controls=""><source src="audios/ppg-vc/Target/nu_TA_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nu_TV_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nu_TA/vc_hvtham_TV_target_ref_nu_TA_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nu_TA/vc_hvtham_TV_target_ref_nu_TA_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+										
+
+												<tr>
+													<td rowspan="8">Tiếng Việt (Nữ) <audio controls=""><source src="audios/ppg-vc/source/Nu_TV_source.wav" /><embed height="50" src="audios/ppg-vc/source/Nu_TV_source.wav" width="100"></embed></audio></td>
+													<td rowspan="4">Tiếng Việt (Nữ) <audio controls=""><source src="audios/ppg-vc/Target/nu_TV_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nu_TV_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nu_TV/vc_Nu_TV_source_ref_nu_TV_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nu_TV/vc_Nu_TV_source_ref_nu_TV_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Việt (Nam) <audio controls=""><source src="audios/ppg-vc/Target/ThayTriet_TV_source.wav" /><embed height="50" src="audios/ppg-vc/Target/ThayTriet_TV_source.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nam_TV/vc_Nu_TV_source_ref_ThayTriet_TV_source_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nam_TV/vc_Nu_TV_source_ref_ThayTriet_TV_source_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Anh (Nữ) <audio controls=""><source src="audios/ppg-vc/Target/nu_TA_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nu_TA_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nu_TA/vc_Nu_TV_source_ref_nu_TA_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nu_TA/vc_Nu_TV_source_ref_nu_TA_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Anh (Nam) <audio controls=""><source src="audios/ppg-vc/Target/nam_TA_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nam_TA_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nam_TA/vc_Nu_TV_source_ref_nam_TA_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nam_TA/vc_Nu_TV_source_ref_nam_TA_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+
+
+												<tr>
+													<td rowspan="8">Tiếng Anh (Nam) <audio controls=""><source src="audios/ppg-vc/source/obama_1_source.wav" /><embed height="50" src="audios/ppg-vc/source/obama_1_source.wav" width="100"></embed></audio></td>
+													<td rowspan="4">Tiếng Anh (Nam) <audio controls=""><source src="audios/ppg-vc/Target/nam_TA_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nam_TA_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nam_TA/vc_obama_1_source_ref_nam_TA_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nam_TA/vc_obama_1_source_ref_nam_TA_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Anh (Nữ) <audio controls=""><source src="audios/ppg-vc/Target/nu_TA_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nu_TA_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nu_TA/vc_obama_1_source_ref_nu_TA_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nu_TA/vc_obama_1_source_ref_nu_TA_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Việt (Nam) <audio controls=""><source src="audios/ppg-vc/Target/ThayTriet_TV_source.wav" /><embed height="50" src="audios/ppg-vc/Target/ThayTriet_TV_source.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nam_TV/vc_obama_1_source_ref_ThayTriet_TV_source_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nam_TV/vc_obama_1_source_ref_ThayTriet_TV_source_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Việt (Nữ) <audio controls=""><source src="audios/ppg-vc/Target/nu_TV_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nu_TV_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nu_TV/vc_obama_1_source_ref_nu_TV_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nu_TV/vc_obama_1_source_ref_nu_TV_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+
+
+												<tr>
+													<td rowspan="8">Tiếng Anh (Nữ) <audio controls=""><source src="audios/ppg-vc/source/Nu_TA_source.wav" /><embed height="50" src="audios/ppg-vc/source/Nu_TA_source.wav" width="100"></embed></audio></td>
+													<td rowspan="4">Tiếng Anh (Nữ) <audio controls=""><source src="audios/ppg-vc/Target/nu_TA_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nu_TA_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nu_TA/vc_Nu_TA_source_ref_nu_TA_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nu_TA/vc_Nu_TA_source_ref_nu_TA_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Anh (Nam) <audio controls=""><source src="audios/ppg-vc/Target/nam_TA_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nam_TA_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nam_TA/vc_Nu_TA_source_ref_nam_TA_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nam_TA/vc_Nu_TA_source_ref_nam_TA_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Việt (Nữ) <audio controls=""><source src="audios/ppg-vc/Target/nu_TV_target.wav" /><embed height="50" src="audios/ppg-vc/Target/nu_TV_target.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nu_TV/vc_Nu_TA_source_ref_nu_TV_target_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nu_TV/vc_Nu_TA_source_ref_nu_TV_target_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+												<tr>
+													<td rowspan="4">Tiếng Việt (Nam) <audio controls=""><source src="audios/ppg-vc/Target/ThayTriet_TV_source.wav" /><embed height="50" src="audios/ppg-vc/Target/ThayTriet_TV_source.wav" width="100"></embed></audio></td>
+													<td><audio controls=""><source src="audios/ppg-vc/output_demo/Target_Nam_TV/vc_Nu_TA_source_ref_ThayTriet_TV_source_step250000.wav" /><embed height="50" src="audios/ppg-vc/output_demo/Target_Nam_TV/vc_Nu_TA_source_ref_ThayTriet_TV_source_step250000.wav" width="100"></embed></audio>
+													</td>
+												</tr>
+
+												
+
+											</tbody>
+										</table>
+									</div>
+									<a href="#" class="button special">Trở lại đầu trang</a>
+									<br></br><br></br>
+								</section>
+								<!--<a name="source"></a>
+									<h2><font size = 5 color= #58c3c2>Source Code</font></h2>
+									<p><font size=5>
+										Source code can be found <a href=https://github.com/zhangyangbill/GRAB/tree/master/code_release><b>here</b></a>.
+									</font></p>
+									<br></br><br></br>-->
+								
+								</section>
+								
+							
+								
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
